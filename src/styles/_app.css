@@ -1,0 +1,46 @@
+/* styles are for mobile view only*/
+@media (max-width: 420px) {
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+  }
+}
+
+@media (max-width: 420px) {
+  .left-side {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.user {
+}
+
+.config {
+}
+
+.right-side {
+}
+
+@media (max-width: 420px) {
+  .content {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.search-bar {
+}
