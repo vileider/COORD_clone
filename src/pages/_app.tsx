@@ -12,9 +12,11 @@ export default function App() {
         <div className='right-side'>Login</div>
       </div>
       <div className='content'>
-        <div className='search-bar'>search bar</div>
+        <div className='search-bar font-bold underline'>search bar</div>
       </div>
     </div>
   );
-  return <>{searchPage}</>;
+  return <>
+  {searchPage}
+  </>;
 }
