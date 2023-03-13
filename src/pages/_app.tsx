@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import "@/styles/_app.css";
 
 export default function App() {
-  const searchPage = (
+  const mainPage = (
     <div className='main-page'>
       <div className='top-bar'>
         <div className='left-side'>
@@ -16,7 +16,5 @@ export default function App() {
       </div>
     </div>
   );
-  return <>
-  {searchPage}
-  </>;
+  return <>{mainPage}</>;
 }
