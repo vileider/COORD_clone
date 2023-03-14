@@ -1,20 +1,16 @@
 import "@/styles/globals.css";
 import "@/styles/_app.css";
 
-export default function App() {
-  const mainPage = (
-    <div className='main-page'>
-      <div className='top-bar'>
-        <div className='left-side'>
-          <div className='user'>user</div>
-          <div className='config'>config</div>
-        </div>
-        <div className='right-side'>Login</div>
-      </div>
-      <div className='content'>
-        <div className='search-bar font-bold underline'>search bar</div>
-      </div>
-    </div>
-  );
-  return <>{mainPage}</>;
-}
+import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+
+export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+
+  return(
+  <>
+  <Component {...pageProps} />
+  <button type="button" onClick={() => router.push('/results')}> results page </button>
+  </>
+  )
+};
