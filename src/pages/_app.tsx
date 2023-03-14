@@ -1,7 +1,11 @@
 import "@/styles/globals.css";
 import "@/styles/_app.css";
+import { useRouter } from 'next/router'
 
 export default function App() {
+
+  const router = useRouter()
+
   const searchPage = (
     <div className='main-page'>
       <div className='top-bar'>
@@ -16,7 +20,12 @@ export default function App() {
       </div>
     </div>
   );
+
   return <>
   {searchPage}
+
+  <button type="button" onClick={() => router.push('/results')}>
+      results
+  </button>
   </>;
 }
