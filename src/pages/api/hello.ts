@@ -8,7 +8,7 @@ type Data = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<object>
 ) {
   res.status(200).json(addressData)
 }
