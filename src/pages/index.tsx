@@ -1,3 +1,5 @@
+import Button from "./button";
+
 export default function Home() {
   const searchPage = (
     <div className='main-page'>
@@ -11,9 +13,10 @@ export default function Home() {
       <div className='content'>
         <div className='search-bar font-bold underline'>search bar</div>
       </div>
+      <Button />
     </div>
   );
   return <>
-  {searchPage}
+    {searchPage}
   </>;
 }
