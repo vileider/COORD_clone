@@ -1,3 +1,5 @@
+import SearchPage from "./Searchpage";
+
 export default function Home() {
   const mainContent = (
     <div className='main-page'>
@@ -8,9 +10,7 @@ export default function Home() {
         </div>
         <div className='right-side'>Login</div>
       </div>
-      <div className='content'>
-        <div className='search-bar font-bold underline'>search bar</div>
-      </div>
+      <SearchPage />
     </div>
   );
   return <>{mainContent}</>;
