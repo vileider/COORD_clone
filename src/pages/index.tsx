@@ -1,4 +1,3 @@
-import Input from "@/reusable components/input";
 import SearchPage from "./Searchpage";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
         <div className='right-side'>Login</div>
       </div>
       <SearchPage />
-      <Input />    
     </div>
   );
   return <>{mainContent}</>;
