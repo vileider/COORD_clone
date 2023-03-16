@@ -1,7 +1,7 @@
 import Button from "./button";
 
 export default function Home() {
-  const searchPage = (
+  const mainContent = (
     <div className='main-page'>
       <div className='top-bar'>
         <div className='left-side'>
@@ -16,7 +16,5 @@ export default function Home() {
       <Button />
     </div>
   );
-  return <>
-    {searchPage}
-  </>;
+  return <>{mainContent}</>;
 }
