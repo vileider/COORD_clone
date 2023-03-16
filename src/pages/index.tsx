@@ -1,5 +1,5 @@
 export default function Home() {
-  const searchPage = (
+  const mainContent = (
     <div className='main-page'>
       <div className='top-bar'>
         <div className='left-side'>
@@ -13,7 +13,5 @@ export default function Home() {
       </div>
     </div>
   );
-  return <>
-  {searchPage}
-  </>;
+  return <>{mainContent}</>;
 }
