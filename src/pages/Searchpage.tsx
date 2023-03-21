@@ -1,4 +1,3 @@
-import "./searchpage.module.css";
 
 export default function SearchPage() {
   const searchElements = (
