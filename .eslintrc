@@ -21,7 +21,7 @@
   },
   "plugins": ["@typescript-eslint", "react", "prettier"],
   "globals": {
-    React: true
+    "React": true
   },
   "rules": {
     "prettier/prettier": [
