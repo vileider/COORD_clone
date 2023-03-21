@@ -1,5 +1,9 @@
+import NavBar from "./NavBar";
+
 export default function TopBar() {
-  const topBar = (
+  
+  return(<>
+  <NavBar />
     <div className='top-bar'>
       <div className='left-side'>
         <div className='user'>user</div>
@@ -7,6 +11,5 @@ export default function TopBar() {
       </div>
       <div className='right-side'>Login</div>
     </div>
-  );
-  return <>{TopBar}</>;
+  </>);
 }
