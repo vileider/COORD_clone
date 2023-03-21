@@ -1,3 +1,4 @@
+import TopBar from "@/components/TopBar";
 import SearchPage from "./Searchpage";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         </div>
         {/* <div className='right-side'>Login</div> */}
       </div>
+      <TopBar />
       <SearchPage />
     </div>
   );
