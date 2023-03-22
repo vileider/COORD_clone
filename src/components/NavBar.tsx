@@ -8,8 +8,7 @@ export default function NavBar() {
           className="text-white py-1 px-4 rounded px-2 border border-white absolute left-0 top-0"
           href="/settings"
         >
-          {' '}
-          Settings{' '}
+          <span className="material-icons text-white">settings</span> Settings{' '}
         </Link>
 
         <Link
