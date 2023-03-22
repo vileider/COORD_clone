@@ -13,6 +13,7 @@ lint:
   stage: lint
   script:
     - yarn install
+    - yarn add --dev eslint
     - yarn lint
   tags:
     - linter
