@@ -9,7 +9,7 @@ export default function TopBar() {
         <div className='user'>user</div>
         <div className='config'>config</div>
       </div>
-      <div className='right-side'>Login</div>
+      <div className="right-side">Login</div>
     </div>
   </>);
 }

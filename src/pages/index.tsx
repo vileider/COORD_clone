@@ -1,5 +1,5 @@
-import TopBar from "@/components/TopBar";
-import SearchPage from "./Searchpage";
+import TopBar from '@/components/TopBar';
+import SearchPage from './Searchpage';
 
 export default function Home() {
   const mainContent = (
