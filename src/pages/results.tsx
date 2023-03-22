@@ -1,20 +1,19 @@
 export default function Results() {
-
-    return(
+  return (
     <>
-    <div className="centered-container">
-    <div className="relative">
-        <div className="text-xl ...">Results</div>
-        <div>
+      <div className="centered-container">
+        <div className="relative">
+          <div className="text-xl ...">Results</div>
+          <div>
             <div>
-                <p>Address1</p>
+              <p>Address1</p>
             </div>
             <div>
-                <p>Address2</p>
+              <p>Address2</p>
             </div>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
     </>
-    )
+  );
 }
