@@ -9,7 +9,7 @@ variables:
 
 # This will run on any new merge request and lint the branch before allowing a merge
 lint:
-  image: alpine:latest
+  image: node:current-alpine
   stage: lint
   script:
     - yarn install
