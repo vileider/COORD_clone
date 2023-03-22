@@ -1,4 +1,5 @@
 stages:
+  - lint
   - publish
   - deploy
 
@@ -6,6 +7,20 @@ variables:
   TAG_LATEST: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:latest
   TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
 
+# This will run on any new merge request and lint the branch before allowing a merge
+lint:
+  image: node:current-alpine
+  stage: lint
+  script:
+    - npm install
+    - npm install --save-dev eslint
+    - npm run lint
+  tags:
+    - linter
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+
+# This stage builds the docker image and publishes it to our GitLab container registry
 publish:
   image: docker:latest
   stage: publish
@@ -19,6 +34,7 @@ publish:
   only:
     - dev
 
+# This stage deploys the built image by the previous stage by connecting via SSH, pulling the image and creating a container
 deploy:
   image: alpine:latest
   stage: deploy
