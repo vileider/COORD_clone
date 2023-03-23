@@ -3,7 +3,11 @@ const Button = () => {
     document.write(search);
   };
 
-  return <button onClick={() => handleClick('Search')}>Click here</button>;
+  return (
+    <>
+      <button onClick={() => handleClick('Search')}>Click here</button>
+    </>
+  );
 };
 
 export default Button;
