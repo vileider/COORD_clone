@@ -1,5 +1,5 @@
 import TopBar from '@/components/TopBar';
-import Button from '@/reusableComponents/button';
+import Input from '@/reusableComponents/input';
 import SearchPage from './Searchpage';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <TopBar />
       <SearchPage />
-      <Button />
+      <Input />
     </div>
   );
   return <>{mainContent}</>;
