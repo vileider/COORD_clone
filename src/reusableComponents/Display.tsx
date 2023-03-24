@@ -1,3 +1,4 @@
+// should import var 'Address' from a function that returns the selected address
 import { Address } from '@/components/NavBar';
 
 export default function DisplayAddress() {
