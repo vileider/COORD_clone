@@ -9,7 +9,13 @@ const Input = () => {
   return (
     <>
       <div>{input}</div> {/* For test to see the input field is working */}
-      <input type="text" id="input" name="input" onChange={handleChange} />
+      <input
+        type="text"
+        className="input"
+        id="input"
+        name="input"
+        onChange={handleChange}
+      />
     </>
   );
 };
