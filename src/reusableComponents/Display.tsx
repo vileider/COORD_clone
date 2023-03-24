@@ -1,5 +1,6 @@
+import { Address } from '@/components/NavBar';
 
-const Address : string = "642 address lane 000 000"
+// const Address : string = "642 address lane 000 000"
 
 export default function DisplayAddress() {
 
