@@ -1,8 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(
+const validatingJson = (str: string) => {
+  try {
+    JSON.parse(str);
+  } catch (e) {
+    return false;
+  }
+  return true;
+};
+
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<object>
+  res: NextApiResponse<string>
 ) {
-  res.end('hello from search nedpoint');
+  //this will be deleted
+  const delayResponse = () => {
+    return new Promise<string>((resolve) => {
+      setTimeout(() => {
+        resolve('{"results":"available"}');
+      }, 2000);
+    });
+  };
+
+  const results = await delayResponse();
+
+  if (validatingJson(results)) {
+    try {
+      res.status(200).json(results);
+    } catch (err) {
+      res.status(500).json('{ "results": "error" }');
+    }
+  } else res.status(200).json('{ results: "not available" }');
 }
