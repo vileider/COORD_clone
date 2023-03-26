@@ -1,8 +1,7 @@
 //import { Address } from '@/components/NavBar';
 
 export default function DisplayAddress() {
-
-  const Address : string = "Address 0000"
+  const Address = 'Address 0000';
 
   return (
     <>
