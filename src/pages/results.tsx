@@ -1,3 +1,6 @@
+import DisplayAddress from '@/reusableComponents/Display';
+import Address from '@/components/NavBar';
+
 export default function Results() {
   return (
     <>
@@ -6,7 +9,7 @@ export default function Results() {
           <div className="text-xl ...">Results</div>
           <div>
             <div>
-              <p>Address1</p>
+              <DisplayAddress {...Address} />
             </div>
             <div>
               <p>Address2</p>
