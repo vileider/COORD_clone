@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const validatingJson = (value: JSON) => {
+const isJSON = (value: JSON) => {
   if (value != null && typeof value != 'string') {
     const valueS: string = JSON.stringify(value);
     try {
@@ -28,7 +28,7 @@ export default async function handler(
 
   const resolve = await delayResponse();
   try {
-    if (validatingJson(resolve)) {
+    if (isJSON(resolve)) {
       res.status(200).json(resolve);
     } else {
       res.status(200).json([{ "results": "not available" }]);}
