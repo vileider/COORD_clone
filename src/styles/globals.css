@@ -3,5 +3,14 @@
 .input{
     @apply border-2 border-gray-200/50 shadow-lg relative left-[22%] text-black font-semibold rounded;
 }
+
+.top-bar{
+    @apply bg-[#dadada] h-16 drop-shadow-xl grid grid-rows-3 grid-flow-col gap-4;
+}
+
+.logo {
+    @apply h-24 col-start-2 col-span-2 pl-40 row-end-3 row-span-2 absolute top-[-17px];
+}
+
 @tailwind utilities;
 @import 'material-icons/iconfont/material-icons.css';
