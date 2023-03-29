@@ -1,4 +1,4 @@
-import TopBar from '@/components/TopBar';
+//import TopBar from '@/components/TopBar';
 import Input from '@/reusableComponents/input';
 import SearchPage from './Searchpage';
 
@@ -11,8 +11,8 @@ export default function Home() {
           <div className='config'>config</div>
         </div>
          <div className='right-side'>Login</div> 
-      </div>*/}
-      <TopBar />
+      </div>
+      <TopBar />*/}
       <SearchPage />
       <Input />
     </div>
