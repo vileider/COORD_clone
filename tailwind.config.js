@@ -10,8 +10,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      bgColor: { 
+      bgColor: {
         'spec-white': '#dadada',
+      },
+      backgroundImage: {
+        'coord-logo': "url('/src/assets/coordlogo.png')",
       },
     },
   },
