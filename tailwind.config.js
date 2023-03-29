@@ -13,9 +13,6 @@ module.exports = {
       bgColor: {
         'spec-white': '#dadada',
       },
-      backgroundImage: {
-        'coord-logo': "url('/src/assets/coordlogo.png')",
-      },
     },
   },
   plugins: [],
