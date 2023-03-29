@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const isJSON = (value: JSON) => {
+const isJSON = (value: object) => {
   if (value != null && typeof value != 'string') {
     const valueS: string = JSON.stringify(value);
     try {
@@ -15,13 +15,13 @@ const isJSON = (value: JSON) => {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<JSON>
+  res: NextApiResponse<object>
 ) {
   //this will be deleted
   const delayResponse = () => {
-    return new Promise<JSON>((resolve) => {
+    return new Promise<object>((resolve) => {
       setTimeout(() => {
-        resolve([{ "exmpleJSON": 'true' }])
+        resolve({ exmpleJSON: 'true' });
       }, 2000);
     });
   };
@@ -31,8 +31,9 @@ export default async function handler(
     if (isJSON(resolve)) {
       res.status(200).json(resolve);
     } else {
-      res.status(200).json([{ "results": "not available" }]);}
+      res.status(200).json({ results: 'not available' });
+    }
   } catch (err) {
-    res.status(500).json([{ "results": err }]);
+    res.status(500).json({ results: 'err ' });
   }
 }
