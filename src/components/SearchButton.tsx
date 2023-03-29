@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import Input from '@/reusableComponents/input';
 
-export function SearchBar(props) {
+export function SearchButton(props) {
   const newAddress = props.input;
   const [Address, setAddress] = useState('');
   const handleClick = () => {
