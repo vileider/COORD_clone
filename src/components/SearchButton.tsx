@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import Results from '@/pages/results';
 
-export function SearchButton(props) {
+interface InputProps {
+  input: string;
+}
+
+export function SearchButton(props: InputProps) {
   const newAddress = props.input;
   const [Address, setAddress] = useState<string>('');
   const handleClick = () => {

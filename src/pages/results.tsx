@@ -1,4 +1,8 @@
-export default function Results(props) {
+interface SearchButtonProps {
+  Address: string;
+}
+
+export default function Results(props: SearchButtonProps) {
   const Address = props.Address;
   return (
     <>
