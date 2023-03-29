@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { SearchBar } from '@/components/SearchBar';
+
 const Input = () => {
   const [input, setInput] = useState<string>('');
 
@@ -8,6 +10,7 @@ const Input = () => {
 
   return (
     <>
+      <SearchBar input={input} />
       <div>{input}</div> {/* For test to see the input field is working */}
       <input
         type="text"

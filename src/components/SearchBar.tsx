@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Input from '@/reusableComponents/input';
+// import Input from '@/reusableComponents/input';
 
-export function SearchBar() {
-  const newAddress = 'this is a string';
+export function SearchBar(props) {
+  const newAddress = props.input;
   const [Address, setAddress] = useState('');
   const handleClick = () => {
     setAddress(newAddress);
@@ -12,7 +12,6 @@ export function SearchBar() {
     <>
       <div className="">
         {Address}
-        <Input />
         <button onClick={handleClick}>
           <span className="material-icons text-white">search</span>
         </button>
