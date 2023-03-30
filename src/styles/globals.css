@@ -3,5 +3,6 @@
 .input{
     @apply border-2 border-gray-200/50 shadow-lg relative left-[22%] text-black font-semibold rounded;
 }
+
 @tailwind utilities;
 @import 'material-icons/iconfont/material-icons.css';
