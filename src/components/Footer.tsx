@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <div className="footer bg-[#dadada] h-16 absolute inset-x-0 bottom-0">
+      <div className="footer bg-[#dadada] dark:bg-[#0C0C0C] h-16 absolute inset-x-0 bottom-0">
         <div className="icons grid grid-rows-1 grid-cols-4 gap-4 absolute top-[35%] left-[5%]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export default function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 col-start-2"
+            className="w-6 h-6 dark:stroke-[#e25812] col-start-2"
           >
             <path
               strokeLinecap="round"
@@ -23,7 +23,7 @@ export default function Footer() {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="w-6 h-6 col-start-4"
+            className="w-6 h-6 dark:stroke-[#e25812] col-start-4"
           >
             <path
               stroke-linecap="round"
@@ -37,7 +37,7 @@ export default function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 col-start-8"
+            className="w-6 h-6 dark:stroke-[#e25812] col-start-8"
           >
             <path
               strokeLinecap="round"
@@ -51,7 +51,7 @@ export default function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 col-start-12"
+            className="w-6 h-6 dark:stroke-[#e25812] col-start-12"
           >
             <path
               strokeLinecap="round"
