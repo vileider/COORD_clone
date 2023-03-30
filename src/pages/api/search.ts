@@ -27,13 +27,18 @@ export default async function handler(
   };
 
   const resolve = await delayResponse();
-  try {
-    if (isJSON(resolve)) {
-      res.status(200).json(resolve);
-    } else {
-      res.status(200).json({ results: 'not available' });
+
+  if (req.method === 'POST') {
+    res.status(200).json(req.body);
+  } else if (req.method === 'GET') {
+    try {
+      if (isJSON(resolve)) {
+        res.status(200).json(resolve);
+      } else {
+        res.status(200).json({ results: 'not available' });
+      }
+    } catch (err) {
+      res.status(500).json({ results: 'err ' });
     }
-  } catch (err) {
-    res.status(500).json({ results: 'err ' });
   }
 }
