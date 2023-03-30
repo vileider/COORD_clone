@@ -1,10 +1,10 @@
 // import { SearchBar } from '@/components/SearchBar';
-import Input from '@/reusableComponents/input';
+import { SearchButton } from '@/components/SearchButton';
 
 export default function SearchPage() {
   return (
     <>
-      <Input />
+      <SearchButton />
     </>
   );
 }

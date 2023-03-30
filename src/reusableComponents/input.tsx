@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { SearchButton } from '@/components/SearchButton';
 
 const Input = () => {
   const [input, setInput] = useState<string>('');
@@ -10,7 +9,6 @@ const Input = () => {
 
   return (
     <>
-      <SearchButton input={input} />
       <div>{input}</div> {/* For test to see the input field is working */}
       <input
         type="text"
