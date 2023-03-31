@@ -10,10 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        dark: '#202020',
+        light: '#D9D9D9',
+      },
       bgColor: {
         'spec-white': '#dadada',
-        'dark-bg': '#202020',
-        'light-bg': '#D9D9D9',
       },
     },
   },
