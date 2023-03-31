@@ -9,7 +9,7 @@ export default function Document() {
         {' '}
         <TopBar />{' '}
       </Head>
-      <body className="dark: bg-[#202020]">
+      <body className="bg-[#D9D9D9]">
         <Main />
         <Footer />
         <NextScript />
