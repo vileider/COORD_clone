@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       bgColor: {
         'spec-white': '#dadada',
+        'dark-bg': '#202020',
+        'light-bg': '#D9D9D9',
       },
     },
   },
