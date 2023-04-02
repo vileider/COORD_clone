@@ -28,17 +28,23 @@ export default async function handler(
 
   const resolve = await delayResponse();
 
-  if (req.method === 'POST') {
-    res.status(200).json(req.body);
-  } else if (req.method === 'GET') {
-    try {
-      if (isJSON(resolve)) {
-        res.status(200).json(resolve);
-      } else {
-        res.status(200).json({ results: 'not available' });
-      }
-    } catch (err) {
-      res.status(500).json({ results: 'err ' });
+  const getMethodConditioning = () => {
+    if (isJSON(resolve)) {
+      return res.status(200).json(resolve);
+    } else {
+      return res.status(200).json({ results: 'not available' });
     }
+  };
+
+  try {
+    if (req.method === 'POST') {
+      res.status(200).json(req.body);
+    } else if (req.method === 'GET') {
+      getMethodConditioning();
+    } else {
+      res.status(500).json({ results: 'wrong method' });
+    }
+  } catch (err) {
+    res.status(500).json({ results: 'err' });
   }
 }
