@@ -1,7 +1,12 @@
 @tailwind base;
 @tailwind components;
+
+.input-container {
+    @apply grid grid-rows-1 grid-cols-4 gap-4;
+}
+
 .input{
-    @apply border-2 border-gray-200/50 shadow-lg relative left-[22%] text-black font-semibold rounded;
+    @apply h-11 border-2 border-gray-200/50 shadow-lg col-start-2 col-span-2 bg-[#ACACAC] dark: bg-[#3D3D3D] text-[#464646] dark:text-[#D2D2D2] text-center font-semibold rounded;
 }
 
 @tailwind utilities;
