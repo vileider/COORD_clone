@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import TopBar from '@/components/TopBar';
+import Footer from '@/components/Footer';
 
 export default function Document() {
   return (
@@ -8,8 +9,9 @@ export default function Document() {
         {' '}
         <TopBar />{' '}
       </Head>
-      <body className="dark:bg-slate-900">
+      <body className="bg-light dark: bg-dark">
         <Main />
+        <Footer />
         <NextScript />
       </body>
     </Html>

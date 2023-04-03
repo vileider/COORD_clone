@@ -7,7 +7,7 @@ export default function Home() {
       <div className="top-bar">
         <div className="left-side"></div>
       </div>
-      <TopBar />
+      <TopBar />*/}
       <SearchPage />
     </div>
   );
