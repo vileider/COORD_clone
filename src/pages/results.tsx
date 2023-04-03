@@ -1,16 +1,15 @@
-interface SearchButtonProps {
-  Address: string;
-}
+import { useContext } from 'react';
+import { AddressContext } from '../reusableComponents/input';
 
-export default function Results(props: SearchButtonProps) {
-  const Address = props.Address;
+export default function Results() {
+  const Address = useContext(AddressContext);
   return (
     <>
       <div className="centered-container">
         <div className="relative">
           <div className="text-xl ...">Results</div>
           <div>
-            <div>{Address}</div>
+            <div>{Address?.address}</div>
             <div>
               <p>Address2</p>
             </div>

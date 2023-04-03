@@ -1,4 +1,10 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
+
+const addressContextTemplate = {
+  address: 'this will be an input variable',
+};
+
+export const AddressContext = createContext(addressContextTemplate);
 
 const Input = () => {
   const [input, setInput] = useState<string>('');
