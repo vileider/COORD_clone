@@ -1,12 +1,13 @@
-//import { Address } from '@/components/NavBar';
+import { useContext } from 'react';
+import { AddressContext } from '@/Context';
 
 export default function DisplayAddress() {
-  const Address = 'Address 0000';
+  const { inputValue } = useContext(AddressContext);
 
   return (
     <>
       <div className="text-white py-1 px-4 rounded px-2 border border-white box-content h-10 w-64 ...">
-        {Address}
+        {inputValue}
       </div>
     </>
   );
