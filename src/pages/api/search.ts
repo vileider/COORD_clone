@@ -1,17 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-const isJSON = (value: object) => {
-  if (value != null && typeof value != 'string') {
-    const valueS: string = JSON.stringify(value);
-    try {
-      JSON.parse(valueS);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-  return false;
-};
+import testadress from '@/testadress.json';
+import { throwMeArrOfObjContaningGivenString, isJSON } from './search.helpers';
+import { validateGivenValueToSearchFormat } from './search.helpers';
 
 export default async function handler(
   req: NextApiRequest,
@@ -38,7 +28,11 @@ export default async function handler(
 
   try {
     if (req.method === 'POST') {
-      res.status(200).json(req.body);
+      const responseRelatedToGivenString = throwMeArrOfObjContaningGivenString(
+        testadress,
+        validateGivenValueToSearchFormat(req.body)
+      );
+      res.status(200).json(responseRelatedToGivenString);
     } else if (req.method === 'GET') {
       getMethodConditioning();
     } else {
