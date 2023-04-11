@@ -8,7 +8,10 @@ const Input = () => {
 
   return (
     <div className="input-container">
-      <div>{input}</div> {/* For test to see the input field is working */}
+      <div className="relative top-[150%] left-[-100%] row-start-6 col-end-4">
+        {input}
+      </div>{' '}
+      {/* For test to see the input field is working */}
       <input
         type="text"
         className="input"
