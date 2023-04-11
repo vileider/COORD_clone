@@ -1,0 +1,112 @@
+[
+  {
+    "uprn": "000000000001",
+    "al1": "HEATH COTTAGE",
+    "al2": "DESHAR ROAD",
+    "al3": "",
+    "al4": "",
+    "al5": "",
+    "town": "BOAT OF GARTEN",
+    "postcode": "PH24 3BN",
+    "locality": "BOAT OF GARTEN"
+  },
+  {
+    "uprn": "000000000002",
+    "al1": "MOUNTAIN ASH",
+    "al2": "BEARNOCK",
+    "al3": "",
+    "al4": "",
+    "al5": "GLENURQUHART",
+    "town": "DRUMNADROCHIT",
+    "postcode": "IV63 6TN",
+    "locality": "INVERNESS"
+  },
+  {
+    "uprn": 116007552,
+    "al1": "FAIRWINDS",
+    "al2": "",
+    "al3": "44 GILLSLAND",
+    "al4": "",
+    "al5": "",
+    "town": "EYEMOUTH",
+    "postcode": "TD14 5JF",
+    "locality": "EYEMOUTH"
+  },
+  {
+    "uprn": 116010460,
+    "al1": "MOUNTAIN ASH",
+    "al2": "",
+    "al3": "HAYSTOUN AVENUE",
+    "al4": "",
+    "al5": "",
+    "town": "PEEBLES",
+    "postcode": "EH45 9EB",
+    "locality": "PEEBLES"
+  },
+  {
+    "uprn": 116011756,
+    "al1": 46,
+    "al2": "",
+    "al3": "HIGH STREET",
+    "al4": "",
+    "al5": "",
+    "town": "GALASHIELS",
+    "postcode": "TD1 1SE",
+    "locality": "GALASHIELS"
+  },
+  {
+    "uprn": 116012125,
+    "al1": 46,
+    "al2": "",
+    "al3": "HIGH STREET",
+    "al4": "",
+    "al5": "",
+    "town": "INNERLEITHEN",
+    "postcode": "EH44 6HF",
+    "locality": "INNERLEITHEN"
+  },
+  {
+    "uprn": 116012269,
+    "al1": 46,
+    "al2": "",
+    "al3": "HIGH STREET",
+    "al4": "",
+    "al5": "",
+    "town": "JEDBURGH",
+    "postcode": "TD8 6DQ",
+    "locality": "JEDBURGH"
+  },
+  {
+    "uprn": 116012575,
+    "al1": 46,
+    "al2": "",
+    "al3": "HIGH STREET",
+    "al4": "",
+    "al5": "",
+    "town": "SELKIRK",
+    "postcode": "TD7 4DD",
+    "locality": "SELKIRK"
+  },
+  {
+    "uprn": 116013036,
+    "al1": 114,
+    "al2": "",
+    "al3": "BEECH AVENUE",
+    "al4": "",
+    "al5": "",
+    "town": "GALASHIELS",
+    "postcode": "TD1 2LF",
+    "locality": "GALASHIELS"
+  },
+  {
+    "uprn": 116015472,
+    "al1": "FAIRWINDS",
+    "al2": "",
+    "al3": "KELSO ROAD",
+    "al4": "",
+    "al5": "",
+    "town": "GORDON",
+    "postcode": "TD3 6JR",
+    "locality": "GORDON"
+  }
+]
