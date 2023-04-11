@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <div className="footer bg-[#dadada] dark:bg-[#0C0C0C] h-16 absolute inset-x-0 bottom-0">
+      <div className="footer bg-[#dadada] dark:bg-[#0C0C0C] shadow-[0_-1px_20px_-8px_rgba(0,0,0,0.3)] h-16 absolute inset-x-0 bottom-0">
         <div className="icons grid grid-rows-1 grid-cols-4 gap-4 absolute top-[35%] left-[5%]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
