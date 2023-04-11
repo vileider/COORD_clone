@@ -16,7 +16,7 @@ const Input = () => {
         name="input"
         onChange={handleChange}
       />
-      <span className="material-icons dark:stroke-[#e25812] w-6 h-6 relative top-[-200%] left-[55%] col-end-4">
+      <span className="material-icons dark:stroke-[#e25812] w-6 h-6 relative top-[25%] left-[55%] row-start-6 col-end-4">
         search
       </span>
     </div>
