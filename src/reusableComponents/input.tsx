@@ -1,22 +1,18 @@
-import { useState, createContext } from 'react';
-
-const addressContextTemplate = {
-  address: 'this will be an input variable',
-};
-
-export const AddressContext = createContext(addressContextTemplate);
+import { useState } from 'react';
+import { useAddress, useUpdateAddress } from '@/Context';
 
 const Input = () => {
-  const [input, setInput] = useState<string>('');
+  const newAddress = useAddress();
+  const setNewAddress = useUpdateAddress();
 
   const handleChange = (e: React.ChangeEvent<{ value: string }>) => {
-    setInput(e.target.value);
+    setNewAddress(e.target.value);
   };
 
   return (
     <div className="input-container">
       <div className="relative top-[150%] left-[-100%] row-start-6 col-end-4">
-        {input}
+        {newAddress}
       </div>{' '}
       {/* For test to see the input field is working */}
       <input

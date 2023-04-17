@@ -1,23 +1,25 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 // import { SearchButton } from './components/SearchButton';
-import { input } from './reusableComponents/input';
 
-interface ContextInterface {
-  inputValue: string;
-  setInputValue: React.Dispatch<React.SetStateAction<string>>;
+const AddressSearchContext = React.createContext();
+const UpdateAddressSearchContext = React.createContext();
+
+export function useAddress() {
+  return useContext(AddressSearchContext);
 }
 
-export const AddressContext = createContext<ContextInterface>({
-  inputValue: input,
-  setInputValue: () => {},
-});
+export function useUpdateAddress() {
+  return useContext(UpdateAddressSearchContext);
+}
 
-export const ContextProvider = ({ children }) => {
-  const [inputValue, setInputValue] = useState('');
+export function AddressContextProvider({ children }) {
+  const [addressValue, setAddressValue] = useState('adlfkhjsadfj');
 
   return (
-    <AddressContext.Provider value={inputValue} function={setInputValue}>
-      {children}
-    </AddressContext.Provider>
+    <AddressSearchContext.Provider value={addressValue}>
+      <UpdateAddressSearchContext.Provider value={setAddressValue}>
+        {children}
+      </UpdateAddressSearchContext.Provider>
+    </AddressSearchContext.Provider>
   );
-};
+}

@@ -1,5 +1,5 @@
 import TopBar from '@/components/TopBar';
-import SearchPage from './Searchpage';
+import SearchBar from '../components/SearchBar';
 
 export default function Home() {
   const mainContent = (
@@ -7,8 +7,8 @@ export default function Home() {
       <div className="top-bar">
         <div className="left-side"></div>
       </div>
-      <TopBar />*/}
-      <SearchPage />
+      <TopBar />
+      <SearchBar />
     </div>
   );
   return <>{mainContent}</>;
