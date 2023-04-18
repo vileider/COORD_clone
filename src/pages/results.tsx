@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import { inputValue } from '@/Context';
+
 
 export default function Results() {
   // const input: string = useState(input);
-  console.log(inputValue);
+
   return (
     <>
       <div className="centered-container">
