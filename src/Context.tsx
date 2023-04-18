@@ -1,25 +1,39 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { useState } from 'react';
 // import { SearchButton } from './components/SearchButton';
 
-const AddressSearchContext = React.createContext();
-const UpdateAddressSearchContext = React.createContext();
-
-export function useAddress() {
-  return useContext(AddressSearchContext);
+interface addressContext {
+  addressValue: string;
+  //setAddressValue?: () => void;
 }
 
-export function useUpdateAddress() {
-  return useContext(UpdateAddressSearchContext);
-}
+// const defaultState = {
+//   addressValue: '',
+// };
+const AddressSearchContext = React.createContext<{
+  addressValue: addressContext;
+  setAddressValue: React.Dispatch<React.SetStateAction<addressContext>>;
+}>();
+
+//export const AddressSearchContext = React.createContext(defaultState);
+//const UpdateAddressSearchContext = React.createContext();
+
+// export function useAddress() {
+//   return useContext(AddressSearchContext);
+// }
+
+// export function useUpdateAddress() {
+//   return useContext(UpdateAddressSearchContext);
+// }
 
 export function AddressContextProvider({ children }) {
-  const [addressValue, setAddressValue] = useState('adlfkhjsadfj');
+  const [addressValue, setAddressValue] = useState<addressContext>('test');
 
   return (
-    <AddressSearchContext.Provider value={addressValue}>
-      <UpdateAddressSearchContext.Provider value={setAddressValue}>
+    <AddressSearchContext.Provider value = {{ addressValue, setAddressValue }}>
         {children}
-      </UpdateAddressSearchContext.Provider>
     </AddressSearchContext.Provider>
   );
+
+ 
 }
+
