@@ -1,6 +1,6 @@
 //import TopBar from '@/components/TopBar';
 import Input from '@/reusableComponents/input';
-import SearchPage from './Searchpage';
+import SearchBar from '@/components/SearchBar';
 import { GlobalContext } from '@/context/globalContext';
 import React from 'react';
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
   const mainContent = (
     <div className="main-page">
       {someOtherState}
-      <SearchPage />
+      <SearchBar />
       <Input />
     </div>
   );
