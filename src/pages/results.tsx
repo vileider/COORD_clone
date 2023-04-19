@@ -1,4 +1,8 @@
+import DisplayAddress from '@/reusableComponents/Display';
+
 export default function Results() {
+  // const input: string = useState(input);
+
   return (
     <>
       <div className="centered-container">
@@ -6,7 +10,7 @@ export default function Results() {
           <div className="text-xl ...">Results</div>
           <div>
             <div>
-              <p>Address1</p>
+              <DisplayAddress />{' '}
             </div>
             <div>
               <p>Address2</p>
