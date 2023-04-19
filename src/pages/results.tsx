@@ -12,6 +12,9 @@ export default function Results() {
             <div>
               <DisplayAddress />{' '}
             </div>
+            <div>
+              <DisplayAddress />
+            </div>
           </div>
         </div>
       </div>
