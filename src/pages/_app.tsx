@@ -10,7 +10,7 @@ import {
 export default function App({ Component, pageProps }: AppProps) {
   const [data, setData] = React.useState(contextDefaultValues.data);
   const changeValues = (value: GlobalContextType) => {
-    setData(data && value);
+    setData({ ...data, ...value });
   };
   return (
     <GlobalContext.Provider value={{ data, setData: changeValues }}>
