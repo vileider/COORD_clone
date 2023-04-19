@@ -1,4 +1,4 @@
-
+import DisplayAddress from '@/reusableComponents/Display';
 
 export default function Results() {
   // const input: string = useState(input);
@@ -9,7 +9,9 @@ export default function Results() {
         <div className="relative">
           <div className="text-xl ...">Results</div>
           <div>
-            <div>{inputValue}</div>
+            <div>
+              <DisplayAddress />{' '}
+            </div>
             <div>
               <p>Address2</p>
             </div>
