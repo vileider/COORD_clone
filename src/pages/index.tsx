@@ -1,11 +1,11 @@
 //import TopBar from '@/components/TopBar';
-import Input from '@/reusableComponents/input';
+//import Input from '@/reusableComponents/input';
 import SearchBar from '@/components/SearchBar';
-// import { GlobalContext } from '@/context/globalContext';
+import { GlobalContext } from '@/context/globalContext';
 import React from 'react';
 export default function Home() {
-  // const { data, setData } = React.useContext(GlobalContext);
-  // const { someOtherState } = data;
+  const { data } = React.useContext(GlobalContext);
+  const { searchResults } = data;
   // React.useEffect(() => {
   //   setTimeout(() => {
   //     setData({ someOtherState: '' });
@@ -15,9 +15,9 @@ export default function Home() {
   // }, []);
   const mainContent = (
     <div className="main-page">
-      {/* {someOtherState} */}
+      {JSON.stringify(searchResults)}
       <SearchBar />
-      <Input />
+      {/* <Input /> */}
     </div>
   );
   return <>{mainContent}</>;
