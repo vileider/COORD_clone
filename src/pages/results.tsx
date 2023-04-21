@@ -5,15 +5,15 @@ export default function Results() {
 
   return (
     <>
-      <div className="centered-container">
-        <div className="relative">
+      <div className="container m-auto grid grid-cols-1 gap-4 place-items-center">
+        <div className="">
           <div className="text-xl ...">Results</div>
           <div>
             <div>
               <DisplayAddress />{' '}
             </div>
             <div>
-              <p>Address2</p>
+              <DisplayAddress />
             </div>
           </div>
         </div>
