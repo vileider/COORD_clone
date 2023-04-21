@@ -1,12 +1,19 @@
 import React from 'react';
 import { GlobalContext } from '@/context/globalContext';
+import { CustomFetch } from './fetch';
 
 const Input = () => {
   const { data, setData } = React.useContext(GlobalContext);
   const { someOtherState } = data;
 
-  const handleChange = (e: any) => {
-    setData({ someOtherState: e.target.value });
+  const handleChange = async (event: React.KeyboardEvent<HTMLElement>) => {
+    let searchPhrase;
+    const { target } = event;
+    if (target) {
+      searchPhrase = await (target as HTMLButtonElement).value;
+    }
+    const fetchResults = await CustomFetch('api/search', 'POST', searchPhrase);
+    setData({ searchResults: fetchResults, addressSearchString: searchPhrase });
   };
 
   return (
@@ -18,8 +25,8 @@ const Input = () => {
         className="input"
         id="input"
         name="input"
-        onKeyUp={(e) => {
-          handleChange(e);
+        onKeyUp={(event: React.KeyboardEvent<HTMLElement>) => {
+          handleChange(event);
         }}
         onChange={() => {
           handleChange;
